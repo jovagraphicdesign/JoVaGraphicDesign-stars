@@ -1,0 +1,73 @@
+.home
+    height: 100vh 
+    width: 100vw
+    margin: 0
+    padding: 0
+    background: linear-gradient(to bottom, #02020c 0%,#05111d 45%,#154e59 86%,#387d7e 100%)
+    overflow: hidden
+    background-attachment: fixed
+
+    @keyframes rotate
+        0%
+            transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0deg)
+        100%
+            transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg)
+
+    .stars
+        transform: perspective(500px)
+        transform-style: preserve-3d
+        position: absolute
+        bottom: 0
+        perspective-origin: 50% 100%
+        left: 50%
+        animation: rotate 90s infinite linear
+
+    .star
+        width: 2px
+        height: 2px
+        background: #387d7e
+        position: absolute
+        top: 0
+        left: 0
+        transform-origin: 0 0 -300px
+        transform: translate3d(0, 0, -300px)
+        backface-visibility: hidden
+    
+    .welkom
+        position: absolute
+        top: 40%
+        left: 10%
+
+        .title
+            span 
+                color: #c1c1c1
+        p 
+            max-width: 400px
+            min-width: 300px
+            margin-bottom: 3em
+        
+        a 
+            border: 1px solid #ffffff
+            padding: 15px 40px
+            position: relative
+            margin-right: 2em 
+            transition: background-color 0.3s ease, color 0.3s ease
+            
+        a:hover 
+            background-color: #ffffff
+            color: #000 
+
+        a::before
+            content: ''
+            position: absolute
+            left: -15px
+            top: 25px
+            bottom: 0
+            width: 30px
+            height: 1px
+            background-color: #ffffff
+            transition: transform 0.3s ease, opacity 0.3s ease
+        
+        a:hover::before
+            transform: translate3d(20px, 0,0)
+            opacity: 0

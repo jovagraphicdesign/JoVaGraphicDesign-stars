@@ -1,0 +1,53 @@
+.skills
+    height: 100vh 
+    width: 100vw
+    margin: 0
+    padding: 0
+    //background: linear-gradient(to bottom, #02020c 0%,#05111d 45%,#154e59 86%,#387d7e 100%)
+    background-color: #05111d
+    overflow: hidden
+    background-attachment: fixed
+
+    .title-skills
+        margin-top: 60px
+        margin-bottom: 50px
+        margin-left: 50px
+
+    .progress-bar-container
+        height: auto
+        max-width: 80%
+        width: 70%
+        margin: 10% auto
+        padding: 50px 0px 50px 100px
+
+    .bar-title
+        font-size: 1rem!important
+        font-weight: 300
+        margin-bottom: 0px
+        color: #ffffff
+        //text-transform: uppercase
+
+
+    .skills-bar
+        background-color: #02020c
+        width: 80%
+        height: 16px
+        margin-bottom: 30px
+        border-radius: 5px
+
+
+    .skills-bar-inner
+        background-color: #387d7e
+        width: 0%
+        height: 100%
+        position: relative
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+        &::after
+            position: absolute
+            right: 2.5%
+            content: attr(data-precent)
+            line-height: 15px
+            color: #ffffff
+            font-weight: 300
+            font-size: 0.8rem
