@@ -35,22 +35,28 @@
     
     .welkom
         position: absolute
-        top: 40%
+        top: 20%
         left: 10%
 
         .title
+            font-size: 1.7rem
             span 
                 color: #c1c1c1
         p 
             max-width: 400px
             min-width: 300px
-            margin-bottom: 3em
+            margin-bottom: 2em
+            margin-top: 1em
         
         a 
+            display: block
             border: 1px solid #ffffff
-            padding: 15px 40px
+            padding: 10px 30px
+            width: 100px
+            text-align: center
             position: relative
-            margin-right: 2em 
+            margin-right: 2em
+            margin-bottom: 1em 
             transition: background-color 0.3s ease, color 0.3s ease
             
         a:hover 
@@ -61,7 +67,7 @@
             content: ''
             position: absolute
             left: -15px
-            top: 25px
+            top: 20px
             bottom: 0
             width: 30px
             height: 1px
@@ -71,3 +77,35 @@
         a:hover::before
             transform: translate3d(20px, 0,0)
             opacity: 0
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px)
+    .home
+        .welkom
+            top: 30%
+            .title
+                font-size: 2rem
+            p 
+                line-height: 1.5em
+            a 
+                display: inline-block
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) 
+    .home
+        .welkom
+            top: 35%
+            .title
+                font-size: 2.2rem
+            p 
+                line-height: 1.7em
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) 
+    .home
+        .welkom
+            top: 40%
+            .title
+                font-size: 2.5rem
+            p 
+                line-height: 1.9em

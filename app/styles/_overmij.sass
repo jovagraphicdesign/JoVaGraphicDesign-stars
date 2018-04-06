@@ -3,35 +3,41 @@
     width: 100vw
     margin: 0
     padding: 0
+    padding-bottom: 30px
     //background: linear-gradient(to bottom, #02020c 0%,#05111d 45%,#154e59 86%,#387d7e 100%)
     background-color: #05111d
-    overflow: hidden
-    background-attachment: fixed
+    //overflow: hidden
+    overflow-x: hidden
+    //background-attachment: fixed
 
     h1 
-        margin-top: 60px
+        margin-top: 50px
         margin-bottom: 50px
         margin-left: 50px
     
     h3 
         margin-left: 50px
-        margin-top: 75px
+        margin-top: 35px
+        font-size: 1rem
     small 
         margin-left: 60px
     
     p 
-        margin-top: 100px
+        margin-top: 30px
         margin-left: 50px
-        margin-bottom: 100px
-        width: 60%
-        line-height: 2rem
+        margin-right: 15px
+        margin-bottom: 30px
+        max-width: 600px
+        min-width: 300px
+        
     
     a 
         border: 1px solid #ffffff
-        padding: 15px 40px
+        padding: 10px 30px
         position: relative
         margin-left: 50px
         margin-top: 60px 
+        
         transition: background-color 0.3s ease, color 0.3s ease
             
     a:hover 
@@ -42,7 +48,7 @@
         content: ''
         position: absolute
         left: -15px
-        top: 25px
+        top: 20px
         bottom: 0
         width: 30px
         height: 1px
@@ -52,3 +58,43 @@
     a:hover::before
         transform: translate3d(20px, 0,0)
         opacity: 0
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px)
+    .overmij
+        .wrapper
+            
+            h1 
+                font-size: 2rem
+                margin-top: 60px
+                margin-bottom: 100px
+            h3 
+                font-size: 1.3rem
+            
+            p 
+                line-height: 1.5em
+                margin-top: 70px
+            a 
+                display: inline-block
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) 
+    .overmij
+        .wrapper
+            
+            h1 
+                font-size: 2.2rem
+                
+            p 
+                line-height: 1.7rem
+                
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px)
+    .overmij
+        .wrapper
+            
+            h1 
+                font-size: 2.5rem
+            p 
+                line-height: 1.9rem
+                margin-top: 100px

@@ -1,0 +1,96 @@
+.work
+    height: 100vh 
+    width: 100vw
+    margin: 0
+    padding: 0
+    //background: linear-gradient(to bottom, #02020c 0%,#05111d 45%,#154e59 86%,#387d7e 100%)
+    background-color: #05111d
+    overflow-x: hidden
+    .wrapper-work
+        position: absolute
+        top: 55px
+        width: 85%
+        margin-left: 60px
+        margin-right: 0px
+        h1 
+            font-size: 1.7rem
+        .portfolio-list
+            list-style: none
+            margin-top: 15%
+            margin-left: 10px
+            width: 100%
+            .portfolio-list-item
+                //padding: 20px 10px 20px 0
+                border-top: 1px solid #ffffff
+                cursor: pointer
+                &:last-of-type
+                    border-bottom: 1px solid #ffffff
+                a
+                    display: block
+                    padding: 36px 100px 
+                    //background-color: pink
+                    
+                    div
+                        display: inline
+                        position: absolute
+                    .portfolio-list-item-name
+                        left: 15px
+                        margin-top: -15px
+                    .portfolio-list-item-role
+                        left: 50%
+                        transform: translate(-50%)
+                        margin-top: -15px
+                        opacity: 0
+                        color: #05111d                                                
+                        transition: opacity 1s 0.1s ease
+                    .portfolio-list-item-view
+                        right: 0
+                        margin-top: -15px
+                        color: #05111d  
+                        opacity: 0
+
+                &:hover
+                    .portfolio-list-item-name
+                        color: #05111d
+                    .portfolio-list-item-role,.portfolio-list-item-view
+                        opacity: 1    
+
+                &:nth-child(3)
+                    background-image: linear-gradient(to top,transparent, transparent 50%, #8bc63e 50%, #a7d46d 100%) 
+                    background-position: 0 100%
+                    background-size: 100% 200%
+                    transition: all 0.5s ease-in
+                    &:hover
+                        background-position: 0 0
+                    
+                    
+                    
+                    
+                    
+                   
+                                     
+                
+                
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px)
+    .work
+        .wrapper
+            top: 60px
+            h1 
+                font-size: 2rem
+            
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) 
+    .work
+        .wrapper
+            h1 
+                font-size: 2.2rem
+            
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) 
+    .work
+        .wrapper
+            h1 
+                font-size: 2.5rem
+            
