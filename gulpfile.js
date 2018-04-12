@@ -54,7 +54,7 @@ gulp.task('lint:test', () => {
 });
 
 gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
+  return gulp.src('app/**/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
     .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
@@ -86,6 +86,7 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*',
+    '!app/**/*.html',
     '!app/*.html'
   ], {
     dot: true
@@ -108,6 +109,7 @@ gulp.task('serve', () => {
     });
 
     gulp.watch([
+      'app/**/*.html',
       'app/*.html',
       'app/images/**/*',
       '.tmp/fonts/**/*'

@@ -4,13 +4,14 @@
     margin: 0
     padding: 0
     //background: linear-gradient(to bottom, #02020c 0%,#05111d 45%,#154e59 86%,#387d7e 100%)
-    background-color: #05111d
+    background-color: $bg-color
     overflow-x: hidden
     .wrapper-work
         position: absolute
         top: 55px
-        width: 85%
-        margin-left: 60px
+        min-width: 85%
+        max-width: 90%
+        margin-left: 20px
         margin-right: 0px
         h1 
             font-size: 1.7rem
@@ -55,16 +56,30 @@
                     .portfolio-list-item-role,.portfolio-list-item-view
                         opacity: 1    
 
+                &:nth-child(1)
+                    background-image: $groen
+
+                &:nth-child(2)
+                    background-image: $roos
+
                 &:nth-child(3)
-                    background-image: linear-gradient(to top,transparent, transparent 50%, #8bc63e 50%, #a7d46d 100%) 
+                    background-image: $grijs
+                
+                &:nth-child(4)
+                    background-image: $rood
+                
+                &:nth-child(5)
+                    background-image: $geel
+
+                &:nth-child(n)
+                    //background-image: $groen
                     background-position: 0 100%
                     background-size: 100% 200%
-                    transition: all 0.5s ease-in
+                    transition: all 0.35s ease-in
                     &:hover
                         background-position: 0 0
-                    
-                    
-                    
+
+                
                     
                     
                    
@@ -74,15 +89,17 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px)
     .work
-        .wrapper
+        .wrapper-work
             top: 60px
+            margin-left: 40px
             h1 
                 font-size: 2rem
             
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) 
     .work
-        .wrapper
+        .wrapper-work
+            margin-left: 60px
             h1 
                 font-size: 2.2rem
             
@@ -90,7 +107,8 @@
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) 
     .work
-        .wrapper
+        .wrapper-work
+            width: 90%
             h1 
                 font-size: 2.5rem
             
